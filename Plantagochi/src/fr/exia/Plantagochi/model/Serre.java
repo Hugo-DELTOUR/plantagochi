@@ -8,14 +8,23 @@ public class Serre {
 	private List<Plante> plantes;
 
 	
-	public Serre(List<Plante> plante) {
+	public Serre() {
 		this.plantes = new ArrayList<>();
 	}
 
 	public List<Plante> getPlantes() {
 		return plantes;
 	}
-
+	
+	public Plante getPlantes(int IDPlante){
+		for(Plante plante : this.plantes){
+			if(plante.getIDPlante() == IDPlante){
+				return plante;
+			}
+		}
+		return null;
+	}
+	
 	public void addPlante(Plante plante) {
 		this.plantes.add(plante);
 	}

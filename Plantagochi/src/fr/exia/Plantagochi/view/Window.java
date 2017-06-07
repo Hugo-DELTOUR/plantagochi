@@ -15,6 +15,40 @@ import javax.swing.JButton;
 public class Window extends JFrame {
 
 	private JPanel contentPane;
+	private JLabel IconTauxLuminosite;
+	private JLabel labelHumiditeAir;
+	private JLabel labelHumiditeSol;
+	private JLabel labelTemperatureAir;
+	private JLabel IconBackground;
+	private JButton btnAllumer;
+	
+	public JPanel getContentPane() {
+		return contentPane;
+	}
+
+	public JLabel getIconTauxLuminosite() {
+		return IconTauxLuminosite;
+	}
+
+	public JLabel getLabelHumiditeAir() {
+		return labelHumiditeAir;
+	}
+
+	public JLabel getLabelHumiditeSol() {
+		return labelHumiditeSol;
+	}
+
+	public JLabel getLabelTemperatureAir() {
+		return labelTemperatureAir;
+	}
+
+	public JLabel getIconBackground() {
+		return IconBackground;
+	}
+
+	public JButton getBtnAllumer() {
+		return btnAllumer;
+	}
 
 	/**
 	 * Launch the application.
@@ -38,40 +72,41 @@ public class Window extends JFrame {
 	public Window() {
 		setTitle("Plantagochi");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 570, 561);
+		setBounds(100, 100, 538, 561);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnAllumer = new JButton("Allumer");
-		btnAllumer.setBounds(5, 488, 71, 23);
+		btnAllumer = new JButton("Allumer");
+		btnAllumer.setBounds(5, 488, 89, 23);
 		contentPane.add(btnAllumer);
 		
-		JLabel labelTauxLuminosite = new JLabel("");
-		labelTauxLuminosite.setIcon(new ImageIcon("C:\\Users\\delto\\git\\plantagochi\\Plantagochi\\icon-moon.jpg"));
-		labelTauxLuminosite.setBounds(26, 11, 50, 56);
-		contentPane.add(labelTauxLuminosite);
+		IconTauxLuminosite = new JLabel("");
+		IconTauxLuminosite.setIcon(new ImageIcon("C:\\Users\\delto\\git\\plantagochi\\Plantagochi\\icon-moon.jpg"));
+		IconTauxLuminosite.setBounds(26, 11, 50, 56);
+		contentPane.add(IconTauxLuminosite);
 		
-		JLabel labelHumiditeAir = new JLabel("0 %");
+		labelHumiditeAir = new JLabel("0 %");
 		labelHumiditeAir.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		labelHumiditeAir.setBounds(420, 155, 48, 28);
+		labelHumiditeAir.setBounds(420, 155, 73, 28);
 		contentPane.add(labelHumiditeAir);
 		
-		JLabel labelHumiditeSol = new JLabel("0 %");
+		labelHumiditeSol = new JLabel("0 %");
 		labelHumiditeSol.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		labelHumiditeSol.setBounds(257, 441, 48, 28);
+		labelHumiditeSol.setBounds(257, 441, 100, 28);
 		contentPane.add(labelHumiditeSol);
 		
-		JLabel labelTemperatureAir = new JLabel("0 T\u00B0");
+		labelTemperatureAir = new JLabel("0 T\u00B0");
 		labelTemperatureAir.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		labelTemperatureAir.setBounds(420, 116, 48, 28);
+		labelTemperatureAir.setBounds(420, 116, 73, 28);
 		contentPane.add(labelTemperatureAir);
 		
-		JLabel IconBackground = new JLabel("");
+		IconBackground = new JLabel("");
 		IconBackground.setBounds(5, 0, 367, 522);
 		IconBackground.setIcon(new ImageIcon("C:\\Users\\delto\\git\\plantagochi\\Plantagochi\\background-plante.png"));
 		contentPane.add(IconBackground);
 	}
+
 }
